@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <div>
+        <li><a href="{% url 'home' %}">home</a></li>
+        <li><a href="{% url 'sintactico:patrones' %}">sintactico</a></li>
+        <li><a href="{% url 'about:about' %}">about</a></li>
+    </div>
+    {% block cabecera %}
+        <!-- <table>
+            <tr>
+                <th>temperatura</th>
+                <th>color</th>
+                <th>inflamacion</th>
+            </tr>
+            {% for elemento in lista %}      
+                <tr>
+                    <td>{{elemento.temperature}}</td>
+                    <td>{{elemento.color}}</td>
+                    <td>{{elemento.inflammation}}</td>
+                </tr>
+            {% endfor %}
+            
+        </table> -->
+        <table>
+            <tr>
+                <th>R1</th>
+                <th>R2</th>
+                <th>Distancia</th>
+                <th>Union</th>
+            </tr>
+            <tr>
+                <td>
+                    {% for a in r1 %} 
+                        {{a}}
+                        <br>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for a in r2 %} 
+                        {{a}}
+                        <br>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for a in distancias %} 
+                        {{a}}
+                        <br>
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for a in distancias %} 
+                        si
+                        <br>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+    {% endblock cabecera %}
+
+    
+    
+</body>
+</html>
