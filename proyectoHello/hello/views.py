@@ -3,8 +3,6 @@ from django.shortcuts import render
 from .models import distancia, tessiu
 # from .forms import registraDistancias
 
-import numpy as np
-
 # Create your views here.
 def myhome(request):
     
