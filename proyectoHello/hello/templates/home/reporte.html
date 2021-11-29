@@ -1,0 +1,26 @@
+{% extends 'home/home.html' %}
+
+{% block formUmbral %}
+<h1>Grafos</h1>
+<table>
+    <tr>
+        <th>R1</th>
+        <th>R2</th>
+        <th>Distancia</th>
+        <th>Union</th>
+    </tr>
+    {% for registro in distancias %}
+    <tr>
+        {% for dato in registro %}
+            {% if dato != "no" %}
+                <td>{{dato}}</td>
+            {% else %}
+                <td style="background-color: red;">{{dato}}</td>
+            {% endif %}
+        {% endfor %}
+    </tr>  
+    {% endfor %}
+    <tr></tr>
+</table>
+{% endblock formUmbral %}
+    
